@@ -1,7 +1,109 @@
-<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reclaimora 支持</title><link rel="stylesheet" href="style.css"></head><body><main>
-<nav><a href="index.html">Reclaimora</a><a href="privacy.html">隐私</a><a href="en/support.html">English</a></nav>
-<h1>支持</h1><p>遇到问题或有疑问？请<a href="https://github.com/silvesun/reclaimora-site/issues">在 GitHub 上提交 issue</a>，并注明 macOS 版本和操作经过。</p>
-<section class="card"><h2>误删了内容</h2><p>所有内容都会进入废纸篓。可在 Reclaimora 的清理记录中恢复，或直接从废纸篓拖出。移除的照片在“照片”的“最近删除”中。</p></section>
-<section class="card"><h2>某个文件夹没有被扫描</h2><p>Reclaimora 只读取你选择的文件夹。请在 Reclaimora 中重新选择该文件夹；邮件附件需要在系统设置 › 隐私与安全性中授予完全磁盘访问权限。</p></section>
-<section class="card"><h2>收不到提醒</h2><p>请在系统设置 › 通知中允许 Reclaimora 发送通知。</p></section>
-<footer>© 2026 Reclaimora</footer></main></body></html>
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reclaimora 支持与常见问题</title>
+<meta name="description" content="Reclaimora 清理、恢复、目录权限和照片常见问题，以及 GitHub 反馈入口。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="alternate" hreflang="zh-Hans" href="https://silvesun.github.io/reclaimora-site/support.html">
+<link rel="alternate" hreflang="en" href="https://silvesun.github.io/reclaimora-site/en/support.html">
+<link rel="canonical" href="https://silvesun.github.io/reclaimora-site/support.html">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html">
+<img src="assets/icon.png" width="38" height="38" alt="">Reclaimora</a>
+<nav class="nav" aria-label="主导航">
+<a href="index.html">首页</a>
+<a href="support.html" aria-current="page">使用支持</a>
+<a href="privacy.html">隐私政策</a>
+<a class="language" href="en/support.html" lang="en">English</a>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="page-intro">
+<p class="eyebrow">HELP / SUPPORT</p>
+<h1>遇到问题，从这里开始。</h1>
+<p class="lede">先查常见问题；如果还没解决，请带上复现步骤向维护者 silvesun 反馈。</p>
+</div>
+<div class="support-layout">
+<section aria-label="常见问题">
+<h2>常见问题</h2>
+<div class="faq">
+<details id="space" open>
+<summary>为什么清理后，可用空间没有增加？</summary>
+<p>普通文件会被移入 macOS 废纸篓，仍占用磁盘空间。Reclaimora 不提供永久删除或清空废纸篓。请先确认所有文件都不再需要；自行清空废纸篓后，应用将无法恢复这些文件。</p>
+</details>
+<details id="restore">
+<summary>如何恢复移入废纸篓的文件？</summary>
+<p>使用清理后的“撤销”，或从“清理记录”恢复。需要记录中的文件仍存在、身份一致、原位置可用，且应用拥有必要权限。如果应用恢复失败，可在访达废纸篓中检查文件。图库照片请在“照片”的“最近删除”中恢复。</p>
+</details>
+<details id="history">
+<summary>删除清理记录，会删除废纸篓里的文件吗？</summary>
+<p>不会。删除记录会同时移除对应的应用内恢复入口，文件仍留在废纸篓。需要保留恢复入口时，不要删除该条记录。</p>
+</details>
+<details id="permissions">
+<summary>为什么有的文件夹无法扫描或结果不完整？</summary>
+<p>先在“设置 › 权限与安全”检查已选择的目录，并在对应功能中重新授权。系统隐私限制、文件权限、未挂载外接盘或已撤销授权都可能影响访问。完全磁盘访问不会绕过 App Sandbox。不要把“无法读取”当作“文件夹为空”。</p>
+</details>
+<details id="store">
+<summary>商店版为什么不列出所有应用关联文件？</summary>
+<p>商店版受 App Sandbox 和用户授权约束，不清理第三方偏好设置、容器、共享应用数据、启动项或浏览器数据。关联文件列表取决于可访问范围；应用不承诺找全每个应用的所有数据。</p>
+</details>
+<details id="photos">
+<summary>相似照片如何删除和恢复？</summary>
+<p>文件夹里的照片按普通文件处理，移入废纸篓。Photos 图库照片通过 Photos 框架删除，在“照片”的“最近删除”中管理恢复，保留时间由 Photos 决定。请先用可丢弃照片确认操作流程。</p>
+</details>
+<details id="notifications">
+<summary>为什么收不到扫描提醒？</summary>
+<p>先在应用设置开启提醒，再到“系统设置 › 通知”检查 Reclaimora 是否允许发送通知，同时检查专注模式。通知是可选功能，关闭不会影响手动扫描。</p>
+</details>
+<details id="editions">
+<summary>切换商店版与直接分发版后，历史记录不见了？</summary>
+<p>两个版本可能使用不同的数据目录，目前没有自动历史迁移。保留原版本和废纸篓文件，避免同时运行两个版本。切换版本或修改授权前，先完成需要的恢复操作。</p>
+</details>
+<details id="update">
+<summary>如何获取更新？</summary>
+<p>Mac App Store 版本通过 App Store 更新。直接分发版本没有应用内自动更新；只从可信的官方发布来源获取与原版本身份一致的更新。不要因本网站展示界面就认为新版本已上架。</p>
+</details>
+</div>
+</section>
+<aside class="card">
+<p class="eyebrow">GITHUB ISSUES</p>
+<h2>还需要帮助？</h2>
+<p>提交时请包含：</p>
+<ol>
+<li>Reclaimora 版本和构建号</li>
+<li>macOS 版本、Apple Silicon 或 Intel</li>
+<li>出现问题的页面和复现步骤</li>
+<li>预期结果、实际结果和脱敏错误信息</li>
+</ol>
+<a class="button" href="https://github.com/silvesun/reclaimora-site/issues/new?template=bug_report.yml">提交问题 ↗</a>
+<a class="button secondary" href="https://github.com/silvesun/reclaimora-site/issues/new?template=feature_request.yml">提出建议 ↗</a>
+<p class="small">需要 GitHub 账号。Issue 是公开的，请勿提交私人文件、账号、完整文件路径或未经脱敏的截图。没有账号也可阅读下方已有反馈。</p>
+<p>
+<a href="https://github.com/silvesun/reclaimora-site/issues">查看已有反馈 →</a>
+</p>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<div>
+<p>© 2026 Reclaimora</p>
+<p>Mac 上的空间整理，清晰、谨慎、由你掌控。</p>
+</div>
+<div class="footer-links">
+<a href="https://github.com/silvesun">维护者 silvesun</a>
+<a href="https://github.com/silvesun/reclaimora-site">网站源码</a>
+<a href="privacy.html">隐私政策</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support & FAQ / 使用支持
+    url: https://silvesun.github.io/reclaimora-site/support.html
+    about: Answers about cleanup, recovery and folder access / 清理、恢复和目录权限说明
+  - name: Privacy policy / 隐私政策
+    url: https://silvesun.github.io/reclaimora-site/privacy.html
+    about: Local processing and GitHub support privacy / 本地处理和 GitHub 反馈隐私说明

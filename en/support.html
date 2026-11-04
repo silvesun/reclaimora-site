@@ -1,7 +1,109 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reclaimora Support</title><link rel="stylesheet" href="../style.css"></head><body><main>
-<nav><a href="index.html">Reclaimora</a><a href="privacy.html">Privacy</a><a href="../support.html">简体中文</a></nav>
-<h1>Support</h1><p>Found a problem or have a question? <a href="https://github.com/silvesun/reclaimora-site/issues">Open an issue on GitHub</a> with your macOS version and what you were doing.</p>
-<section class="card"><h2>I removed something by mistake</h2><p>Everything goes to the Trash. Restore it from Cleanup History in Reclaimora, or drag it out of the Trash. Removed photos are in the Photos app's Recently Deleted album.</p></section>
-<section class="card"><h2>A folder isn't scanned</h2><p>Reclaimora only reads folders you choose. Choose the folder again in Reclaimora, or grant Full Disk Access in System Settings › Privacy &amp; Security for Mail attachments.</p></section>
-<section class="card"><h2>Reminders don't appear</h2><p>Allow notifications for Reclaimora in System Settings › Notifications.</p></section>
-<footer>© 2026 Reclaimora</footer></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reclaimora Support &amp; FAQ</title>
+<meta name="description" content="Help with Reclaimora cleanup, recovery, folder permissions, photos, and GitHub support.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="zh-Hans" href="https://silvesun.github.io/reclaimora-site/support.html">
+<link rel="alternate" hreflang="en" href="https://silvesun.github.io/reclaimora-site/en/support.html">
+<link rel="canonical" href="https://silvesun.github.io/reclaimora-site/en/support.html">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html">
+<img src="../assets/icon.png" width="38" height="38" alt="">Reclaimora</a>
+<nav class="nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="support.html" aria-current="page">Support</a>
+<a href="privacy.html">Privacy</a>
+<a class="language" href="../support.html" lang="zh-Hans">简体中文</a>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="page-intro">
+<p class="eyebrow">HELP / SUPPORT</p>
+<h1>Let’s work it out.</h1>
+<p class="lede">Start with the answers below. Still stuck? Share reproducible steps with the maintainer, silvesun.</p>
+</div>
+<div class="support-layout">
+<section aria-label="Frequently asked questions">
+<h2>Common questions</h2>
+<div class="faq">
+<details id="space" open>
+<summary>Why hasn’t free space increased after cleanup?</summary>
+<p>Ordinary files are moved to macOS Trash and still occupy disk space. Reclaimora does not empty Trash or permanently delete files. Before emptying Trash yourself, make sure you no longer need the files; the app cannot restore them afterwards.</p>
+</details>
+<details id="restore">
+<summary>How do I restore files moved to Trash?</summary>
+<p>Use Undo after cleanup, or restore from Cleanup History. The recorded file must still exist, match its recorded identity, have an available original location, and be accessible to the app. If in-app recovery fails, check the files in Finder’s Trash. Restore Photos library images in Photos → Recently Deleted.</p>
+</details>
+<details id="history">
+<summary>Does deleting history delete files from Trash?</summary>
+<p>No. Deleting a cleanup record also removes its in-app restore entry, while the files remain in Trash. Keep the record if you want to keep that restore entry.</p>
+</details>
+<details id="permissions">
+<summary>Why is a folder missing or a scan incomplete?</summary>
+<p>Check selected folders in Settings → Permissions & Safety and grant access again from the relevant feature. macOS privacy restrictions, file permissions, disconnected drives, or revoked access can prevent reading. Full Disk Access does not bypass App Sandbox. An unreadable folder is not necessarily empty.</p>
+</details>
+<details id="store">
+<summary>Why doesn’t the App Store edition show all app-related files?</summary>
+<p>The App Store edition is limited by App Sandbox and user-granted access. It does not clean third-party preferences, containers, shared app data, startup items, or browser data. Results depend on accessible locations; the app does not promise to find every associated file.</p>
+</details>
+<details id="photos">
+<summary>How are similar photos deleted and restored?</summary>
+<p>Images in folders are moved to Trash as ordinary files. Photos library images are removed through the Photos framework and managed in Photos → Recently Deleted. Photos controls retention. Try the flow with disposable test photos first.</p>
+</details>
+<details id="notifications">
+<summary>Why am I not receiving reminders?</summary>
+<p>Enable reminders in the app, then check Reclaimora in System Settings → Notifications and review your Focus settings. Notifications are optional; turning them off does not affect manual scans.</p>
+</details>
+<details id="editions">
+<summary>Why did history change after switching editions?</summary>
+<p>The App Store and directly distributed editions may use different local data directories. There is no automatic history migration. Keep the original edition and Trash files, avoid running both editions together, and complete any restoration before switching editions or changing access.</p>
+</details>
+<details id="update">
+<summary>How do I update the app?</summary>
+<p>Update the Mac App Store edition through the App Store. The directly distributed edition has no in-app auto-updater; use only a trusted official release source with the same app identity. Interface screenshots on this website do not mean a new version is available in the store.</p>
+</details>
+</div>
+</section>
+<aside class="card">
+<p class="eyebrow">GITHUB ISSUES</p>
+<h2>Still need a hand?</h2>
+<p>Please include:</p>
+<ol>
+<li>Reclaimora version and build</li>
+<li>macOS version; Apple Silicon or Intel</li>
+<li>The affected page and steps to reproduce</li>
+<li>Expected and actual results; redacted errors</li>
+</ol>
+<a class="button" href="https://github.com/silvesun/reclaimora-site/issues/new?template=bug_report.yml">Report a problem ↗</a>
+<a class="button secondary" href="https://github.com/silvesun/reclaimora-site/issues/new?template=feature_request.yml">Suggest an improvement ↗</a>
+<p class="small">A GitHub account is required to post. Issues are public: do not share private files, accounts, full file paths, or unredacted screenshots. Existing reports can be read without an account.</p>
+<p>
+<a href="https://github.com/silvesun/reclaimora-site/issues">Browse existing reports →</a>
+</p>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<div>
+<p>© 2026 Reclaimora</p>
+<p>Storage care for your Mac. Clear, considered, in your control.</p>
+</div>
+<div class="footer-links">
+<a href="https://github.com/silvesun">Maintained by silvesun</a>
+<a href="https://github.com/silvesun/reclaimora-site">Website source</a>
+<a href="privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
