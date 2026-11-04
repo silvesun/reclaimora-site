@@ -1,53 +1,53 @@
-name: Problem report / 问题反馈
-description: Report an issue with Reclaimora / 反馈使用问题
+name: Problem report
+description: Report an issue with Reclaimora
 title: "[Bug] "
 body:
   - type: markdown
     attributes:
-      value: "Issues are public. Do not upload private files, account details, full file paths, or unredacted screenshots. / 反馈公开可见，请勿上传私人文件、账号、完整路径或未脱敏截图。"
+      value: "Issues are public. Do not upload private files, account details, full file paths, or unredacted screenshots."
   - type: input
     id: app_version
     attributes:
-      label: Reclaimora version and build / 版本与构建号
+      label: Reclaimora version and build
       placeholder: "For example: 1.0 (2)"
     validations:
       required: true
   - type: input
     id: macos
     attributes:
-      label: macOS version / 系统版本
+      label: macOS version
     validations:
       required: true
   - type: dropdown
     id: architecture
     attributes:
-      label: Mac architecture / 芯片架构
+      label: Mac architecture
       options:
         - Apple Silicon
         - Intel
-        - Not sure / 不确定
+        - Not sure
     validations:
       required: true
   - type: dropdown
     id: edition
     attributes:
-      label: Edition / 安装来源
+      label: Edition
       options:
         - Mac App Store
-        - Direct distribution / 直接分发
-        - Development build / 开发构建
-        - Not sure / 不确定
+        - Direct distribution
+        - Development build
+        - Not sure
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce / 复现步骤
-      description: Include the affected page, expected result, and actual result. / 请包含页面、预期结果与实际结果。
+      label: Steps to reproduce
+      description: Include the affected page, expected result, and actual result.
     validations:
       required: true
   - type: textarea
     id: permissions
     attributes:
-      label: Permission state and redacted errors / 权限状态与脱敏错误
-      description: Describe access without revealing personal folder paths. / 描述授权状态即可，不要提供私人路径。
+      label: Permission state and redacted errors
+      description: Describe access without revealing personal folder paths.

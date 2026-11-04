@@ -1,93 +1,90 @@
 <!doctype html>
-<html lang="zh-Hans">
+<html lang="en-US">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Reclaimora 支持与常见问题</title>
-<meta name="description" content="Reclaimora 清理、恢复、目录权限和照片常见问题，以及 GitHub 反馈入口。">
+<title>Reclaimora Support &amp; FAQ</title>
+<meta name="description" content="Help with Reclaimora cleanup, recovery, folder permissions, photos, and GitHub support.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="assets/icon.png">
-<link rel="alternate" hreflang="zh-Hans" href="https://silvesun.github.io/reclaimora-site/support.html">
-<link rel="alternate" hreflang="en" href="https://silvesun.github.io/reclaimora-site/en/support.html">
 <link rel="canonical" href="https://silvesun.github.io/reclaimora-site/support.html">
 </head>
 <body>
-<a class="skip" href="#main">跳到正文</a>
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="wrap header-inner">
 <a class="brand" href="index.html">
 <img src="assets/icon.png" width="38" height="38" alt="">Reclaimora</a>
-<nav class="nav" aria-label="主导航">
-<a href="index.html">首页</a>
-<a href="support.html" aria-current="page">使用支持</a>
-<a href="privacy.html">隐私政策</a>
-<a class="language" href="en/support.html" lang="en">English</a>
+<nav class="nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="support.html" aria-current="page">Support</a>
+<a href="privacy.html">Privacy</a>
 </nav>
 </div>
 </header>
 <main id="main" class="wrap">
 <div class="page-intro">
 <p class="eyebrow">HELP / SUPPORT</p>
-<h1>遇到问题，从这里开始。</h1>
-<p class="lede">先查常见问题；如果还没解决，请带上复现步骤向维护者 silvesun 反馈。</p>
+<h1>Let’s work it out.</h1>
+<p class="lede">Start with the answers below. Still stuck? Share reproducible steps with the maintainer, silvesun.</p>
 </div>
 <div class="support-layout">
-<section aria-label="常见问题">
-<h2>常见问题</h2>
+<section aria-label="Frequently asked questions">
+<h2>Common questions</h2>
 <div class="faq">
 <details id="space" open>
-<summary>为什么清理后，可用空间没有增加？</summary>
-<p>普通文件会被移入 macOS 废纸篓，仍占用磁盘空间。Reclaimora 不提供永久删除或清空废纸篓。请先确认所有文件都不再需要；自行清空废纸篓后，应用将无法恢复这些文件。</p>
+<summary>Why hasn’t free space increased after cleanup?</summary>
+<p>Ordinary files are moved to macOS Trash and still occupy disk space. Reclaimora does not empty Trash or permanently delete files. Before emptying Trash yourself, make sure you no longer need the files; the app cannot restore them afterwards.</p>
 </details>
 <details id="restore">
-<summary>如何恢复移入废纸篓的文件？</summary>
-<p>使用清理后的“撤销”，或从“清理记录”恢复。需要记录中的文件仍存在、身份一致、原位置可用，且应用拥有必要权限。如果应用恢复失败，可在访达废纸篓中检查文件。图库照片请在“照片”的“最近删除”中恢复。</p>
+<summary>How do I restore files moved to Trash?</summary>
+<p>Use Undo after cleanup, or restore from Cleanup History. The recorded file must still exist, match its recorded identity, have an available original location, and be accessible to the app. If in-app recovery fails, check the files in Finder’s Trash. Restore Photos library images in Photos → Recently Deleted.</p>
 </details>
 <details id="history">
-<summary>删除清理记录，会删除废纸篓里的文件吗？</summary>
-<p>不会。删除记录会同时移除对应的应用内恢复入口，文件仍留在废纸篓。需要保留恢复入口时，不要删除该条记录。</p>
+<summary>Does deleting history delete files from Trash?</summary>
+<p>No. Deleting a cleanup record also removes its in-app restore entry, while the files remain in Trash. Keep the record if you want to keep that restore entry.</p>
 </details>
 <details id="permissions">
-<summary>为什么有的文件夹无法扫描或结果不完整？</summary>
-<p>先在“设置 › 权限与安全”检查已选择的目录，并在对应功能中重新授权。系统隐私限制、文件权限、未挂载外接盘或已撤销授权都可能影响访问。完全磁盘访问不会绕过 App Sandbox。不要把“无法读取”当作“文件夹为空”。</p>
+<summary>Why is a folder missing or a scan incomplete?</summary>
+<p>Check selected folders in Settings → Permissions & Safety and grant access again from the relevant feature. macOS privacy restrictions, file permissions, disconnected drives, or revoked access can prevent reading. Full Disk Access does not bypass App Sandbox. An unreadable folder is not necessarily empty.</p>
 </details>
 <details id="store">
-<summary>商店版为什么不列出所有应用关联文件？</summary>
-<p>商店版受 App Sandbox 和用户授权约束，不清理第三方偏好设置、容器、共享应用数据、启动项或浏览器数据。关联文件列表取决于可访问范围；应用不承诺找全每个应用的所有数据。</p>
+<summary>Why doesn’t the App Store edition show all app-related files?</summary>
+<p>The App Store edition is limited by App Sandbox and user-granted access. It does not clean third-party preferences, containers, shared app data, startup items, or browser data. Results depend on accessible locations; the app does not promise to find every associated file.</p>
 </details>
 <details id="photos">
-<summary>相似照片如何删除和恢复？</summary>
-<p>文件夹里的照片按普通文件处理，移入废纸篓。Photos 图库照片通过 Photos 框架删除，在“照片”的“最近删除”中管理恢复，保留时间由 Photos 决定。请先用可丢弃照片确认操作流程。</p>
+<summary>How are similar photos deleted and restored?</summary>
+<p>Images in folders are moved to Trash as ordinary files. Photos library images are removed through the Photos framework and managed in Photos → Recently Deleted. Photos controls retention. Try the flow with disposable test photos first.</p>
 </details>
 <details id="notifications">
-<summary>为什么收不到扫描提醒？</summary>
-<p>先在应用设置开启提醒，再到“系统设置 › 通知”检查 Reclaimora 是否允许发送通知，同时检查专注模式。通知是可选功能，关闭不会影响手动扫描。</p>
+<summary>Why am I not receiving reminders?</summary>
+<p>Enable reminders in the app, then check Reclaimora in System Settings → Notifications and review your Focus settings. Notifications are optional; turning them off does not affect manual scans.</p>
 </details>
 <details id="editions">
-<summary>切换商店版与直接分发版后，历史记录不见了？</summary>
-<p>两个版本可能使用不同的数据目录，目前没有自动历史迁移。保留原版本和废纸篓文件，避免同时运行两个版本。切换版本或修改授权前，先完成需要的恢复操作。</p>
+<summary>Why did history change after switching editions?</summary>
+<p>The App Store and directly distributed editions may use different local data directories. There is no automatic history migration. Keep the original edition and Trash files, avoid running both editions together, and complete any restoration before switching editions or changing access.</p>
 </details>
 <details id="update">
-<summary>如何获取更新？</summary>
-<p>Mac App Store 版本通过 App Store 更新。直接分发版本没有应用内自动更新；只从可信的官方发布来源获取与原版本身份一致的更新。不要因本网站展示界面就认为新版本已上架。</p>
+<summary>How do I update the app?</summary>
+<p>Update the Mac App Store edition through the App Store. The directly distributed edition has no in-app auto-updater; use only a trusted official release source with the same app identity. Interface screenshots on this website do not mean a new version is available in the store.</p>
 </details>
 </div>
 </section>
 <aside class="card">
 <p class="eyebrow">GITHUB ISSUES</p>
-<h2>还需要帮助？</h2>
-<p>提交时请包含：</p>
+<h2>Still need a hand?</h2>
+<p>Please include:</p>
 <ol>
-<li>Reclaimora 版本和构建号</li>
-<li>macOS 版本、Apple Silicon 或 Intel</li>
-<li>出现问题的页面和复现步骤</li>
-<li>预期结果、实际结果和脱敏错误信息</li>
+<li>Reclaimora version and build</li>
+<li>macOS version; Apple Silicon or Intel</li>
+<li>The affected page and steps to reproduce</li>
+<li>Expected and actual results; redacted errors</li>
 </ol>
-<a class="button" href="https://github.com/silvesun/reclaimora-site/issues/new?template=bug_report.yml">提交问题 ↗</a>
-<a class="button secondary" href="https://github.com/silvesun/reclaimora-site/issues/new?template=feature_request.yml">提出建议 ↗</a>
-<p class="small">需要 GitHub 账号。Issue 是公开的，请勿提交私人文件、账号、完整文件路径或未经脱敏的截图。没有账号也可阅读下方已有反馈。</p>
+<a class="button" href="https://github.com/silvesun/reclaimora-site/issues/new?template=bug_report.yml">Report a problem ↗</a>
+<a class="button secondary" href="https://github.com/silvesun/reclaimora-site/issues/new?template=feature_request.yml">Suggest an improvement ↗</a>
+<p class="small">A GitHub account is required to post. Issues are public: do not share private files, accounts, full file paths, or unredacted screenshots. Existing reports can be read without an account.</p>
 <p>
-<a href="https://github.com/silvesun/reclaimora-site/issues">查看已有反馈 →</a>
+<a href="https://github.com/silvesun/reclaimora-site/issues">Browse existing reports →</a>
 </p>
 </aside>
 </div>
@@ -96,12 +93,12 @@
 <div class="wrap footer-inner">
 <div>
 <p>© 2026 Reclaimora</p>
-<p>Mac 上的空间整理，清晰、谨慎、由你掌控。</p>
+<p>Storage care for your Mac. Clear, considered, in your control.</p>
 </div>
 <div class="footer-links">
-<a href="https://github.com/silvesun">维护者 silvesun</a>
-<a href="https://github.com/silvesun/reclaimora-site">网站源码</a>
-<a href="privacy.html">隐私政策</a>
+<a href="https://github.com/silvesun">Maintained by silvesun</a>
+<a href="https://github.com/silvesun/reclaimora-site">Website source</a>
+<a href="privacy.html">Privacy</a>
 </div>
 </div>
 </footer>

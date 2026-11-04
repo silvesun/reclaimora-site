@@ -1,20 +1,20 @@
-name: Suggestion / 功能建议
-description: Suggest an improvement / 提出改进建议
+name: Suggestion
+description: Suggest an improvement
 title: "[Suggestion] "
 body:
   - type: markdown
     attributes:
-      value: "This is a public discussion. Please keep personal information out of your report. / 这是公开讨论，请勿包含个人敏感信息。"
+      value: "This is a public discussion. Please keep personal information out of your report."
   - type: textarea
     id: problem
     attributes:
-      label: What are you trying to do? / 你希望完成什么？
-      description: Describe your use case and the difficulty you encountered. / 请描述使用场景和遇到的困难。
+      label: What are you trying to do?
+      description: Describe your use case and the difficulty you encountered.
     validations:
       required: true
   - type: textarea
     id: suggestion
     attributes:
-      label: Suggested improvement / 建议如何改进？
+      label: Suggested improvement
     validations:
       required: true

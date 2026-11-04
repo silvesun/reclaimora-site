@@ -1,22 +1,25 @@
 # Reclaimora support website
 
-Bilingual static support website for Reclaimora, published by GitHub Pages from `main` at the repository root.
+English-only support website for Reclaimora’s planned United States App Store launch. Published with GitHub Pages from `main` at the repository root.
 
 - Home: https://silvesun.github.io/reclaimora-site/
-- Support: https://silvesun.github.io/reclaimora-site/support.html
-- Privacy: https://silvesun.github.io/reclaimora-site/privacy.html
-- English: https://silvesun.github.io/reclaimora-site/en/
+- Support URL: https://silvesun.github.io/reclaimora-site/support.html
+- Privacy Policy URL: https://silvesun.github.io/reclaimora-site/privacy.html
 - Feedback: https://github.com/silvesun/reclaimora-site/issues/new/choose
 
-Maintainer: [silvesun](https://github.com/silvesun). Feedback is public and requires a GitHub account to post. Never request private files, account information, full paths or unredacted scan records.
+The old `/en/index.html`, `/en/support.html` and `/en/privacy.html` URLs continue to serve English content. The root URLs are canonical. There are no Chinese pages or language switches.
 
-## Local preview and validation
+Maintainer: [silvesun](https://github.com/silvesun). Posting feedback requires a GitHub account. Issues are public: never include private files, account information, full paths or unredacted scan records.
+
+## Preview and checks
 
 ```bash
 python3 scripts/check_site.py
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-No build dependencies, JavaScript, analytics, remote fonts or forms. All assets are hosted here. Screenshots are captured from the actual app using fictional data. Keep both languages consistent with the shipping app; moving files to Trash does not immediately free space, restoration is conditional, and Photos library recovery is managed by Photos.
+No build dependencies, JavaScript, analytics, remote fonts or forms. Screenshots show the actual app with fictional data. File cleanup moves files to Trash and does not immediately free space; restoration is conditional. Photos manages library recovery in Recently Deleted.
 
-Update `privacy.html` and `en/privacy.html` together whenever data handling changes. GitHub Pages/Issues have their own data processing, separate from the offline app. Pushes to `main` trigger GitHub Pages publication and the static link check workflow. No App Store download URL is advertised until a live listing is confirmed.
+Keep the root and `/en/` pages consistent. GitHub Pages and Issues process requests separately from the offline app, as explained in the privacy policy. No App Store download link is advertised until the listing is confirmed live.
+
+App Store Connect distribution must be set separately to United States only, with English (U.S.) as the primary language. Publishing this website does not change storefront availability or the app’s in-app language support.

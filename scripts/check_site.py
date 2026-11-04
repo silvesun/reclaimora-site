@@ -27,7 +27,8 @@ pages = {}
 for path in ROOT.rglob('*.html'):
     page = Page(path)
     page.feed(path.read_text())
-    assert page.lang and page.title, f'{path}: missing language or title'
+    assert page.lang == 'en-US' and page.title, f'{path}: expected English (US) language and title'
+    assert not any('\u4e00' <= c <= '\u9fff' for c in path.read_text()), f'{path}: unexpected Chinese text'
     pages[path.resolve()] = page
 for path, page in pages.items():
     for link in page.links:
@@ -38,5 +39,5 @@ for path, page in pages.items():
         assert target.exists(), f'{path}: missing {link}'
         if url.fragment and target in pages:
             assert unquote(url.fragment) in pages[target].ids, f'{path}: missing fragment {link}'
-assert len(pages) == 6, f'Expected six localized pages, got {len(pages)}'
+assert len(pages) == 6, f'Expected three English pages and three legacy English aliases, got {len(pages)}'
 print(f'Checked {len(pages)} pages: local links, assets, fragment targets, language and image alt text OK')
